@@ -16,15 +16,15 @@ export const getStaticProps = async ()=>{
 
 export default function Home({result}) {
   const propertyData = result.data;
-  const [searchValue,setSearchValue] = useState()
+  const [filterData,setFilterData] = useState(propertyData)
   const [property,setAllProperty] = useState(propertyData);
   console.log(property)
   return (
     <>
       <Banner/>
       <Container>
-        <Row className='my-5'>
-          <AllProperty property={property} />
+        <Row className='my-2'>
+          <AllProperty property={property} filterData={filterData} setFilterData={setFilterData} />
         </Row>
       </Container>
     </>

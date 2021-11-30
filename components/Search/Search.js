@@ -1,7 +1,10 @@
-
 import { Button, Card, Col, Container, Form, FormControl, InputGroup, Row } from 'react-bootstrap'
-
+import  Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/dist/client/router'; 
 const Search = ({result},searchValue,setSearchValue) => {
+    // const [] = useState([]);
+    // useEffect()
     console.log(result)
     const searchOnEvent =(e)=>{
         const text = e.target.value;
@@ -17,21 +20,9 @@ const Search = ({result},searchValue,setSearchValue) => {
     return (
         <Container>
             <Row className='mt-5'>
-                <Col xs='12' md='8' className='mx-auto bg-dark p-4'>
-                    <Card className='p-2'>
-                       <Form onSubmit={handleOnSubmit}>
-                            <InputGroup className="mb-3">
-                                <FormControl
-                                onChange={searchOnEvent}
-                                placeholder="Search by location or Postal code or City "
-                                aria-label="Recipient's username"
-                                aria-describedby="basic-addon2"
-                                />
-                                <Button type='submit' variant="outline-secondary" id="button-addon2">
-                                    Search
-                                </Button>
-                            </InputGroup>
-                       </Form>
+                <Col xs='12' md='8' className='mx-auto'>
+                    <Card className=''>
+                      <h2>Search Compound</h2>
                     </Card>
                 </Col>
             </Row>
