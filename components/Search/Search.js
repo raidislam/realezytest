@@ -2,19 +2,12 @@ import { Button, Card, Col, Container, Form, FormControl, InputGroup, Row } from
 import  Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router'; 
-const Search = ({result},searchValue,setSearchValue) => {
+const Search = ({result}) => {
+    const router = useRouter();
     // const [] = useState([]);
     // useEffect()
     console.log(result)
-    const searchOnEvent =(e)=>{
-        const text = e.target.value;
-        setSearchValue(text)
-
-    }
-    const handleOnSubmit = (e)=>{
-        e.preventDefault()
-        console.log(searchValue)
-    }
+   
     
 
     return (

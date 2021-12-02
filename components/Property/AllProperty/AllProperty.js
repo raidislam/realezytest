@@ -24,12 +24,12 @@ const AllProperty = ({property,filterData,setFilterData}) => {
                                 aria-label="Recipient's username"
                                 aria-describedby="basic-addon2"
                                 />
-                               <Link href='/search?=for-rent'>
+                               <Link href='/search?listing_purpose=rent'>
                                <Button type='submit' variant="outline-secondary" id="button-addon2">
                                     Rent 
                                 </Button>
                                </Link>
-                               <Link href='/search?=for-buy'>
+                               <Link href='/search?listing_purpose=buy'>
                                 <Button type='submit' variant="outline-secondary" id="button-addon2">
                                     Buy 
                                 </Button>
