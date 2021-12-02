@@ -1,4 +1,5 @@
 import React from 'react'
+import { Card, CardGroup, Col, Container, Row } from 'react-bootstrap';
 
 
 export const getStaticPaths = async ()=>{
@@ -45,11 +46,36 @@ export const getStaticProps = async (context)=>{
 
 
 const singleProperty = ({result}) => {
-    console.log(result.data)
+    const single_property = result.data
+    console.log(single_property)
     return (
-        <div>
-            <h2>{result.data.name}</h2>
-        </div>
+        <>
+            <h2>Product name : {single_property.name}</h2>
+            <h3>country Name : {single_property.country}</h3>
+            <h3>Property Type : {single_property.listing_purpose}</h3>
+
+            <Container>
+                <Row className='mx-auto'>
+                    <Col xs='12' md='8'>
+                        <CardGroup>
+                            <Card>
+                                <Card.Img variant="top" src={single_property.images} />
+                                <Card.Body>
+                                <Card.Title>Card title</Card.Title>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                                </Card.Body>
+                                <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                                </Card.Footer>
+                            </Card>
+                      </CardGroup>
+                    </Col>
+                </Row>
+            </Container>
+        </>
     )
 }
 
